@@ -2,6 +2,11 @@ fun main() {
 
     //Задача 1
     val print = { str: String -> print(str) }
+    fun repeatPrint(count: Int, message: String, print: (String) -> Unit) {
+        repeat(count) {
+            print(message)
+        }
+    }
     print("Пример выполнения решения задачи 1: ")
     repeatPrint(1, "1", print = print)
     println()
@@ -37,11 +42,4 @@ fun main() {
     val array = arrayOf(2, 5, 6, 9, 1)
     transformArray(array)
     println("Пример выполнения решения задачи 4: " + array.contentToString())
-}
-
-//Функция для задачи 1
-fun repeatPrint(count: Int, message: String, print: (String) -> Unit) {
-    repeat(count) {
-        print(message)
-    }
 }
